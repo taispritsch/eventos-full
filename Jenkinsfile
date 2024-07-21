@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        GIT_CREDENTIALS_ID = '30594dfc-863c-4e56-98e8-8091e0d21d7e' 
+        GIT_CREDENTIALS_ID = '30594dfc-863c-4e56-98e8-8091e0d21d7e'
     }
 
     stages {
@@ -26,17 +26,10 @@ pipeline {
             }
         }
         
-        stage('Build') {
-            steps {
-                // Comando para criar build, se necessário
-                sh 'composer build'
-            }
-        }
-        
         stage('Deploy') {
             steps {
-                // Comando para transferir o conteúdo para o container de homologação
-                sh 'scp -r /path/to/build user@homolog:/path/to/deploy'
+                // Transferir o conteúdo para o container de homologação
+               sh 'scp -r * univates@177.44.248.56:/eventos-full'
             }
         }
     }
