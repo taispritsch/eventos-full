@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: "${env.GIT_CREDENTIALS_ID}", url: 'https://github.com/taispritsch/eventos-full.git'
+                git credentialsId: "${env.GIT_CREDENTIALS_ID}", url: 'https://github.com/taispritsch/eventos-full.git', branch: 'main'
             }
         }
         
