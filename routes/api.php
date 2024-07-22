@@ -24,10 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth.eventos')->group(function () {
     Route::get('eventos', [EventoController::class, 'index']);
     Route::get('/eventos/{id}', [EventoController::class, 'show']);
-});
 
 Route::middleware('auth.inscricoes')->group(function () {
     Route::get('/inscricoes', [InscricaoController::class, 'index']);

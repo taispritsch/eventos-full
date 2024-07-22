@@ -17,13 +17,13 @@ class InscricaoTableSeeder extends Seeder
     {
         Inscricao::create([
             'usuario_id' => 1, 
-            'evento_id' => 1,  
+            'evento_id' => 3,  
             'data_inscricao' => now(),
         ]);
         
         Inscricao::create([
             'usuario_id' => 2,
-            'evento_id' => 2,  
+            'evento_id' => 4,  
             'data_inscricao' => now(),
         ]);
         
