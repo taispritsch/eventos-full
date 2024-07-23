@@ -16,7 +16,7 @@ class EventoController extends Controller
     public function show($id)
     {
         try {
-            $evento = Evento::with('inscricoesssss')->findOrFail($id);
+            $evento = Evento::with('inscricoes')->findOrFail($id);
             return response()->json($evento->inscricoes, 200);
         } catch (ModelNotFoundException $e) {
             return response()->json(['message' => 'Evento não encontrado'], 404);
