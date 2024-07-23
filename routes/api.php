@@ -27,29 +27,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::get('eventos', [EventoController::class, 'index']);
     Route::get('/eventos/{id}', [EventoController::class, 'show']);
 
-Route::middleware('auth.inscricoes')->group(function () {
     Route::get('/inscricoes', [InscricaoController::class, 'index']);
     Route::get('/inscricoes/{id}', [InscricaoController::class, 'show']);
     Route::post('/inscricoes', [InscricaoController::class, 'store']);
     Route::delete('/inscricoes/{id}', [InscricaoController::class, 'destroy']);
-});
 
-Route::middleware('auth.presencas')->group(function () {
     Route::get('/presencas', [PresencaController::class, 'index']);
     Route::post('/presencas', [PresencaController::class, 'store']);
-});
 
-Route::middleware('auth.usuarios')->group(function () {
     Route::get('/usuarios', [UsuarioController::class, 'index']); 
     Route::post('/usuarios', [UsuarioController::class, 'store']);
-});
 
-Route::middleware('auth.autenticacao')->group(function () {
     Route::post('/autenticacao', [AuthController::class, 'authenticate']);
-});
 
-Route::middleware('auth.email')->group(function () {
     Route::post('/emails', [EmailController::class, 'send']);
-});
 
 
