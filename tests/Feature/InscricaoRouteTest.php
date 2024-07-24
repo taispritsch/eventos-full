@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class InscricaoTest extends TestCase
+class InscricaoRouteTest extends TestCase
 {
    /** @test */
    public function it_tests_the_inscricao_route_status()
