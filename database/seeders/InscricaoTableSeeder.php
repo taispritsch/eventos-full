@@ -16,7 +16,7 @@ class InscricaoTableSeeder extends Seeder
     public function run()
     {
         Inscricao::create([
-            'usuario_id' => 1, 
+            'usuario_id' => 3, 
             'evento_id' => 3,  
             'data_inscricao' => now(),
         ]);
