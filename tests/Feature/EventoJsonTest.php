@@ -16,5 +16,7 @@ class EventoJsonTest extends TestCase
         $response->assertJsonStructure([
             '*' => ['id', 'nome', 'data', 'hora', 'created_at', 'updated_at']
         ]);
+
+        /*TESTEEEEEEEEEEE*/
     }
 }
