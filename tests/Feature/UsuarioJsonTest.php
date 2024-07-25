@@ -14,7 +14,7 @@ class UsuarioJsonTest extends TestCase
         $response = $this->get('/api/usuarios');
         $response->assertStatus(200);
         $response->assertJsonStructure([
-            '*' => ['id', 'nome', 'email', 'senha', 'created_at', 'updated_at', 'user_coluna']
+            '*' => ['id', 'nome', 'email', 'senha', 'created_at', 'updated_at', 'nova_coluna']
         ]);
     }
 }
